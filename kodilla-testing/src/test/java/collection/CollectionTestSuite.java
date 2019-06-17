@@ -21,13 +21,13 @@ public class CollectionTestSuite {
     }
     @Test
     public void testOddNumbersExterminatorEmptyList(){
-
+        ArrayList<Integer> listOne = new ArrayList<Integer>();
         OddNumbersExterminator testerOne = new OddNumbersExterminator();
-        testerOne.exterminate();
+        testerOne.exterminate(listOne);
     }
     @Test
     public void testOddNumbersExterminatorNormalList(){
-        ArrayList<Integer> list = new ArrayList<>();
+        ArrayList<Integer> list = new ArrayList<Integer>();
         Random random = new Random();
         for (int n=0; n < 200; n++){
             list.add(random.nextInt(100));
