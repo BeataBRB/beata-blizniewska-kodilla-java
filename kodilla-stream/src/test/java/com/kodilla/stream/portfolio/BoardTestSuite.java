@@ -136,5 +136,33 @@ public class BoardTestSuite {
         //Then
         Assert.assertEquals(2, longTasks);
     }
+    @Test
+    public void testAddTaskListAverageWorkingOnTask() {
 
+        //Given
+        Board project = prepareTestData();
+
+        //When
+        List<TaskList> inProgressTasks = new ArrayList<>();
+        inProgressTasks.add(new TaskList("In progress"));
+        long howManyDays = project.getTaskLists().stream()
+                .filter(inProgressTasks::contains)
+                .flatMap(t1 -> t1.getTasks().stream())
+                .map(t -> (LocalDate.now().toEpochDay()) - t.getCreated().toEpochDay())
+                .reduce((long) 0, (sum, current) -> sum = sum + current);
+
+        long howManyTasks = project.getTaskLists().stream()
+                .filter(inProgressTasks::contains)
+                .flatMap(t1 -> t1.getTasks().stream())
+                .count();
+
+        double avarage = howManyDays / (double) howManyTasks;
+
+        // Then
+
+        Assert.assertEquals(30, howManyDays);
+        Assert.assertEquals(3, howManyTasks);
+        Assert.assertEquals(10, avarage, 0.0);
+
+    }
 }
