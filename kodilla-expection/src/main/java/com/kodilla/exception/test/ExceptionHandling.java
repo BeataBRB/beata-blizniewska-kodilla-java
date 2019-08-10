@@ -4,7 +4,7 @@ public class ExceptionHandling {
     public static void main(String args[]) {
 
         SecondChallenge secondChallenge = new SecondChallenge();
-
+        String result = "No result!";
         double x = 3.0;
         double y = 3.0;
 
@@ -13,7 +13,10 @@ public class ExceptionHandling {
 
         } catch (Exception e) {
 
-            System.out.println("This combination of doubles is unacceptable! if(x >= 2 || x < 1 || y == 1.5) - I will surelly throw an exception!");
+            System.out.println("Exception: " + e);
+        }
+        finally {
+            System.out.println(result);
         }
 
     }
