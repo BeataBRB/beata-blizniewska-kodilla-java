@@ -20,14 +20,20 @@ public class LibraryTestSuite {
         library.getBooks().add(book3);
 
         Library clonedLibrary = null;
-
-        clonedLibrary = library.shallowCopy();
-        clonedLibrary.setName("List of the most popular book of crime book stories");
+        try {
+            clonedLibrary = library.shallowCopy();
+            clonedLibrary.setName("List of the most popular book of crime book stories");
+        } catch (CloneNotSupportedException e){
+            e.printStackTrace();
+        }
 
         Library deepClonedLibrary = null;
-        deepClonedLibrary = library.deepCopy();
-        deepClonedLibrary.setName("List of the most popular of thriller book");
-
+        try {
+            deepClonedLibrary = library.deepCopy();
+            deepClonedLibrary.setName("List of the most popular of thriller book");
+        } catch (CloneNotSupportedException e){
+            e.printStackTrace();
+        }
 
         library.getBooks().remove(book1);
 

@@ -24,6 +24,16 @@ public final class Library extends Prototype {
         this.name = name;
     }
 
+    @Override
+    public String toString() {
+        return "Library {" +
+                "name=\n'" + name + '\'' +
+                ", books=\n" + books +
+                '}';
+    }
+
+
+
     public Library shallowCopy() throws CloneNotSupportedException {
         return (Library) super.clone();
     }
