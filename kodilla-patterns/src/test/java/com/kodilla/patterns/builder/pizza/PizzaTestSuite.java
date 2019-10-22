@@ -8,16 +8,15 @@ public class PizzaTestSuite {
     public void testPizzaNew() {
         //Given
         Pizza pizza = new Pizza.PizzaBuilder()
-                .ingredient("Onion")
+                .ingredient("Salami")
                 .bottom("Thin")
                 .sauce("Spicy")
-                .ingredient("Ham")
-                .ingredient("Mushrooms")
+                .ingredient("Jalapeno")
                 .build();
         System.out.println(pizza);
         //When
         int howManyIngredients = pizza.getIngredients().size();
         //Then
-        Assert.assertEquals(3, howManyIngredients);
+        Assert.assertEquals(2, howManyIngredients);
     }
 }
