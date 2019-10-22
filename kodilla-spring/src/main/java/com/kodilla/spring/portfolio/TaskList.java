@@ -10,8 +10,8 @@ public class TaskList {
         tasks = new ArrayList<>();
     }
 
-    public boolean addTask(String taskDescription){
-        return tasks.add(taskDescription);
+    public void addTask(String task){
+        tasks.add(task);
     }
 
     @Override

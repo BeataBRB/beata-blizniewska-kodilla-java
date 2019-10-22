@@ -67,7 +67,7 @@ public class BookDirectoryTestSuite {
 
         // When
         List<Book> theListOfBooks0 = bookLibrary.listBooksWithCondition("ZeroBooks");
-        List<Book> theListOfBooks15 = bookLibrary.listBooksWithCondition("Any title");
+        List<Book> theListOfBooks15 = bookLibrary.listBooksWithCondition("AnyTitle");
         List<Book> theListOfBooks40 = bookLibrary.listBooksWithCondition("FortyBooks");
         // Then
 
