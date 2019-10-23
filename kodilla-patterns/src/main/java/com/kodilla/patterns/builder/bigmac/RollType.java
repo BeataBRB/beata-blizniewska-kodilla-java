@@ -1,4 +1,6 @@
 package com.kodilla.patterns.builder.bigmac;
 
-public class RollType {
+public enum RollType {
+    STANDARD,
+    WITH_SEZAME
 }
