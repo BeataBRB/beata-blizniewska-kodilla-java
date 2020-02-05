@@ -82,7 +82,7 @@ import java.util.List;
             int id = johnSmith.getId();
 
             //When
-            List<Employee> employeesWithLastName = employeeDao.retrieveEmployeesByLastname("Smith");
+            List<Employee> employeesWithLastName = employeeDao.retrieveFindByLastname("Smith");
 
             //Then
             Assert.assertEquals(1, employeesWithLastName.size());

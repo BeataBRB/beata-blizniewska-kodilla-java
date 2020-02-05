@@ -8,11 +8,11 @@ import java.util.Date;
 
 @NamedQueries({
         @NamedQuery(
-                name = "Task.retrieveLongTask",
+                name = "Task.retrieveLongTasks",
                 query = "FROM Task WHERE duration > 10"
         ),
         @NamedQuery(
-                name = "Task.retrieveLongTask",
+                name = "Task.retrieveShortTasks",
                 query = "FROM Task WHERE duration <= 10"
         ),
         @NamedQuery(
@@ -31,8 +31,7 @@ import java.util.Date;
 
 
 @Entity
-@Table(name = "TASK")
-
+@Table(name = "TASKS")
 public class Task {
     private int id;
     private String description;
