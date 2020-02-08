@@ -82,13 +82,13 @@ import java.util.List;
             int id = johnSmith.getId();
 
             //When
-            List<Employee> employeesWithLastName = employeeDao.retrieveFindByLastname("Smith");
+            List<Employee> employeesWithLastName = employeeDao.retrieveEmployeeLastNameWith("Smith");
 
             //Then
-            Assert.assertEquals(1, employeesWithLastName.size());
+            Assert.assertEquals(17, employeesWithLastName.size());
 
             //CleanUp
-           employeeDao.deleteById(id);
+           employeeDao.deleteAll();
 
         }
 
@@ -107,7 +107,7 @@ import java.util.List;
             companyDao.save(softwareMachines);
             int id = softwareMachines.getId();
             //When
-            List<Company> companiesWithThreeFirsLetters = companyDao.retrieveCompaniesByFirstThreeLetters("Sof");
+            List<Company> companiesWithThreeFirsLetters = companyDao.retrieveCompanyNameStartingWith("Sof");
 
             //Then
             Assert.assertEquals(1, companiesWithThreeFirsLetters.size());
