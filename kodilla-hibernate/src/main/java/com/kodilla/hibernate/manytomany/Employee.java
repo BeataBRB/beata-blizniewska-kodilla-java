@@ -23,7 +23,7 @@ public class Employee {
     private int id;
     private String firstname;
     private String lastname;
-    private List<Company> companies=new ArrayList<>();
+    private List<Company> companies = new ArrayList<>();
 
     public Employee() {
     }
