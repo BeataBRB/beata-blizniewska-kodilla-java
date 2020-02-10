@@ -5,15 +5,7 @@ import java.util.List;
 
 public final class Continent {
     private final List<Country> listOfCountriesOnContinent = new ArrayList<>();
-    private final String continentName;
 
-    public Continent(String continentName) {
-        this.continentName = continentName;
-    }
-
-    public String getContinentName() {
-        return continentName;
-    }
 
     public List<Country> getListOfCountriesOnContinent() {
         return new ArrayList<>(listOfCountriesOnContinent);
@@ -21,5 +13,8 @@ public final class Continent {
 
     public boolean addCountry (Country country){
         return listOfCountriesOnContinent.add(country);
+    }
+    public boolean removeCountry(Country country){
+        return listOfCountriesOnContinent.remove(country);
     }
 }

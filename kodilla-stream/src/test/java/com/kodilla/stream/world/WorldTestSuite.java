@@ -11,17 +11,17 @@ public class WorldTestSuite {
         //Given
         World world = new World();
 
-        Continent europa = new Continent("Europa");
-        Continent asia = new Continent("Asia");
-        Continent australia = new Continent("Africa");
+        Continent europa = new Continent();
+        Continent asia = new Continent();
+        Continent australia = new Continent();
 
-        Country poland = new Country("Poland");
-        Country kosovo = new Country("Kosovo");
-        Country japan = new Country("Japan");
-        Country vietnam = new Country("Vietnam");
-        Country sudan = new Country("Sudan");
-        Country angola = new Country("Angola");
-        Country russia = new Country("Russia");
+        Country poland = new Country("38000000");
+        Country kosovo = new Country("1831000");
+        Country japan = new Country("126800000");
+        Country vietnam = new Country("95540000");
+        Country sudan = new Country("40530000");
+        Country angola = new Country("29780000");
+        Country russia = new Country("144500000");
 
         world.addContinent(europa);
         world.addContinent(asia);
@@ -42,7 +42,7 @@ public class WorldTestSuite {
 
         BigDecimal totalPeople = world.getPeopleQuantity();
         //Then
-        BigDecimal totalPeopleExpected = new BigDecimal("7000007");
+        BigDecimal totalPeopleExpected = new BigDecimal("476981000");
         Assert.assertEquals(totalPeopleExpected, totalPeople);
     }
 }
